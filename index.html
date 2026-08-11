@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>V Service — Ремонт и ъпгрейд на компютри</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Ремонт, сервиз и ъпгрейд на компютри — V Service" />
+  </head>
+  <body>
+    <header class="topbar dark">
+      <div class="brand">V SERVICE</div>
+      <nav>
+        <button id="offersBtn" class="btn">Оферти</button>
+        <a href="#about" class="link">За нас</a>
+        <a href="#contact" class="link">Контакт</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero dark">
+        <div class="flow-line"></div>
+        <div class="hero-inner">
+          <div class="logo-wrap" aria-hidden="true">
+            <img id="logoImg" src="logo.png" alt="V Service logo" onerror="this.style.display='none';document.querySelector('.logo-svg').style.opacity='1';" />
+            <svg class="logo-svg" viewBox="0 0 200 200" aria-hidden="true" style="opacity:0;transition:opacity 0.4s ease;">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#fff" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#fff" stop-opacity="0.85" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <g transform="translate(100,100) scale(0.95)">
+                <path class="vpath" d="M-40,-60 L0,50 L40,-60 L10,-60 L0,-20 L-10,-60 Z" fill="url(#g)" />
+              </g>
+            </svg>
+          </div>
+
+          <h1>V SERVICE</h1>
+          <p class="tagline">Ремонт, ъпгрейд и бърза диагностика на компютри с бляскаво бяло присъствие.</p>
+          <div class="cta">
+            <a href="#contact" class="btn primary">Запази проверка</a>
+            <button id="offersBtn2" class="btn">Виж офертите</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="info section-reveal">
+        <h2>За нас</h2>
+        <p>V Service е местен сервиз за компютри, който се фокусира върху диагностика, ремонт на компоненти и оптимизация на работа. Предлагаме прозрачни цени и бързо обслужване.</p>
+        <ul class="services">
+          <li>Премахване на вируси и зловреден софтуер</li>
+          <li>Диагностика и ремонт на хардуер</li>
+          <li>Ъпгрейд на RAM / SSD / GPU</li>
+          <li>Възстановяване на данни и настройка на архивиране</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="info contact section-reveal">
+        <h2>Контакт</h2>
+        <p>Имейл: <a href="mailto:info@vservice.local">info@vservice.local</a> — Телефон: <strong>+1 555 123 4567</strong></p>
+      </section>
+    </main>
+
+    <!-- Popup / modal for offers -->
+    <div id="offersModal" class="modal" aria-hidden="true">
+      <div class="modal-panel">
+        <button id="closeOffers" class="close">×</button>
+        <h3>Текущи оферти</h3>
+        <ul>
+          <li>Безплатна диагностика за нови клиенти (на място)</li>
+          <li>10% отстъпка при ъпгрейд на RAM или SSD (ограничено време)</li>
+          <li>Приоритетно обслужване в същия ден за бизнес клиенти</li>
+        </ul>
+        <p class="small">Кликнете извън прозореца или натиснете Esc, за да затворите.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
