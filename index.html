@@ -1,88 +1,131 @@
 <!doctype html>
 <html lang="bg">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>V Service — Ремонт и ъпгрейд на компютри</title>
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="description" content="Ремонт, сервиз и ъпгрейд на компютри — V Service" />
-  </head>
-  <body>
-    <header class="topbar dark">
-      <div class="brand">V SERVICE</div>
-      <nav>
-        <button id="offersBtn" class="btn">Оферти</button>
-        <a href="#about" class="link">За нас</a>
-        <a href="#contact" class="link">Контакт</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>V Service — Ремонт и ъпгрейд на компютри</title>
+  <meta name="description" content="Ремонт, сервиз и ъпгрейд на компютри — V Service" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar dark">
+    <div class="brand">V SERVICE</div>
+    <nav>
+      <button id="offersBtn" class="btn" type="button">Оферти</button>
+      <a href="#about" class="link">За нас</a>
+      <button id="contactBtn" class="btn" type="button">Контакт</button>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero dark">
-        <div class="flow-line"></div>
-        <div class="hero-inner">
-          <div class="logo-wrap" aria-hidden="true">
-            <img id="logoImg" src="logo.png" alt="V Service logo" onerror="this.style.display='none';document.querySelector('.logo-svg').style.opacity='1';" />
-            <svg class="logo-svg" viewBox="0 0 200 200" aria-hidden="true" style="opacity:0;transition:opacity 0.4s ease;">
-              <defs>
-                <linearGradient id="g" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#fff" stop-opacity="1" />
-                  <stop offset="100%" stop-color="#fff" stop-opacity="0.85" />
-                </linearGradient>
-                <filter id="glow">
-                  <feGaussianBlur stdDeviation="5" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
-              <g transform="translate(100,100) scale(0.95)">
-                <path class="vpath" d="M-40,-60 L0,50 L40,-60 L10,-60 L0,-20 L-10,-60 Z" fill="url(#g)" />
-              </g>
-            </svg>
-          </div>
-
-          <h1>V SERVICE</h1>
-          <p class="tagline">Ремонт, ъпгрейд и бърза диагностика на компютри с бляскаво бяло присъствие.</p>
-          <div class="cta">
-            <a href="#contact" class="btn primary">Запази проверка</a>
-            <button id="offersBtn2" class="btn">Виж офертите</button>
-          </div>
+  <main>
+    <section class="hero dark">
+      <div class="flow-line"></div>
+      <div class="hero-inner">
+        <div class="logo-wrap">
+          <img id="logoImg" src="logo.png" alt="V Service logo" />
+          <svg class="logo-svg" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#fff" stop-opacity="0.85" />
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="5" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <g transform="translate(100,100) scale(0.95)">
+              <path d="M-40,-60 L0,50 L40,-60 L10,-60 L0,-20 L-10,-60 Z" fill="url(#g)" />
+            </g>
+          </svg>
         </div>
-      </section>
 
-      <section id="about" class="info section-reveal">
-        <h2>За нас</h2>
-        <p>V Service е местен сервиз за компютри, който се фокусира върху диагностика, ремонт на компоненти и оптимизация на работа. Предлагаме прозрачни цени и бързо обслужване.</p>
-        <ul class="services">
-          <li>Премахване на вируси и зловреден софтуер</li>
-          <li>Диагностика и ремонт на хардуер</li>
-          <li>Ъпгрейд на RAM / SSD / GPU</li>
-          <li>Възстановяване на данни и настройка на архивиране</li>
-        </ul>
-      </section>
-
-      <section id="contact" class="info contact section-reveal">
-        <h2>Контакт</h2>
-        <p>Имейл: <a href="mailto:info@vservice.local">info@vservice.local</a> — Телефон: <strong>+1 555 123 4567</strong></p>
-      </section>
-    </main>
-
-    <!-- Popup / modal for offers -->
-    <div id="offersModal" class="modal" aria-hidden="true">
-      <div class="modal-panel">
-        <button id="closeOffers" class="close">×</button>
-        <h3>Текущи оферти</h3>
-        <ul>
-          <li>Безплатна диагностика за нови клиенти (на място)</li>
-          <li>10% отстъпка при ъпгрейд на RAM или SSD (ограничено време)</li>
-          <li>Приоритетно обслужване в същия ден за бизнес клиенти</li>
-        </ul>
-        <p class="small">Кликнете извън прозореца или натиснете Esc, за да затворите.</p>
+        <h1>V SERVICE</h1>
+        <p class="tagline">Ремонт, ъпгрейд и бърза диагностика на компютри с бляскаво бяло присъствие.</p>
+        <div class="cta">
+          <button id="bookingBtn" class="btn primary" type="button">Запази проверка</button>
+          <button id="offersBtn2" class="btn" type="button">Виж офертите</button>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section id="about" class="info section-reveal">
+      <h2>За нас</h2>
+      <p>V Service е местен сервиз за компютри, който се фокусира върху диагностика, ремонт на компоненти и оптимизация на работа. Предлагаме прозрачни цени и бързо обслужване.</p>
+      <ul class="services">
+        <li>Премахване на вируси и зловреден софтуер</li>
+        <li>Диагностика и ремонт на хардуер</li>
+        <li>Ъпгрейд на RAM / SSD / GPU</li>
+        <li>Възстановяване на данни и настройка на архивиране</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="info contact section-reveal">
+      <h2>Контакт</h2>
+      <p>Имейл: <a href="mailto:valkata_2000@abv.bg">valkata_2000@abv.bg</a> — Телефон: <a href="tel:+359882437800">+359 88 243 7800</a></p>
+    </section>
+  </main>
+
+  <div id="offersModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="offersTitle">
+    <div class="modal-panel">
+      <button id="closeOffers" class="close" type="button" aria-label="Затвори">×</button>
+      <h3 id="offersTitle">Текущи оферти</h3>
+      <ul>
+        <li>Диагностика 15€ (на място)</li>
+        <li>Ъпгрейд на RAM или SSD 10€ (ограничено време)</li>
+        <li>Сглобяване на компютър 25€</li>
+        <li>Почистване от прах 10€</li>
+        <li>Активация на Windows и Microsoft Office 30€</li>
+        <li>Cable management 20€</li>
+      </ul>
+      <p class="small">Кликнете извън прозореца или натиснете Esc, за да затворите.</p>
+    </div>
+  </div>
+
+  <div id="bookingModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+    <div class="modal-panel contact-panel">
+      <button id="closeBooking" class="close" type="button" aria-label="Затвори">×</button>
+      <h3 id="bookingTitle">Запази проверка</h3>
+      <form id="bookingForm">
+        <label>Име
+          <input type="text" name="name" autocomplete="name" required placeholder="Вашето име" />
+        </label>
+        <label>Имейл
+          <input type="email" name="email" autocomplete="email" required placeholder="you@example.com" />
+        </label>
+        <label>Телефон
+          <input type="tel" name="phone" autocomplete="tel" required placeholder="+359 88 123 4567" />
+        </label>
+        <label>Дата
+          <input id="bookingDate" type="date" name="date" required />
+        </label>
+        <label>Час
+          <input type="time" name="time" required />
+        </label>
+        <div class="form-actions">
+          <button id="saveDraftBtn" type="button" class="btn">Запази чернова</button>
+          <span id="bookingStatus" class="small status">Полетата ще бъдат изпратени чрез вашия настроен имейл клиент.</span>
+        </div>
+        <button type="submit" class="btn primary">Изпрати заявка</button>
+        <p class="small">При изпращане ще се отвори настроеният имейл клиент с готово съобщение до V Service.</p>
+        <p class="small">Ако не се отвори, изпратете заявката ръчно до <a href="mailto:valkata_2000@abv.bg">valkata_2000@abv.bg</a>.</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="modal-panel contact-panel">
+      <button id="closeContact" class="close" type="button" aria-label="Затвори">×</button>
+      <h3 id="contactTitle">Контакт</h3>
+      <p class="contact-balloon">Имейл: <a href="mailto:valkata_2000@abv.bg">valkata_2000@abv.bg</a></p>
+      <p class="contact-balloon">Телефон: <a href="tel:+359882437800">+359 88 243 7800</a></p>
+      <p class="small dark-small">Кликнете извън прозореца или натиснете Esc, за да затворите.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
